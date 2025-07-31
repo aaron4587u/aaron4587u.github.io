@@ -8,25 +8,20 @@ ShowToc: true
 TocOpen: true
 ---
 <style>
-@media (min-width: 1024px) {
-  .post-single .post-header + .post-content {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-  }
-  
-  .toc {
-    position: sticky;
-    top: 20px;
-    width: 280px;
-    height: fit-content;
-    background: #f8f9fa;
-    border: 1px solid #e9ecef;
-    border-radius: 8px;
-    padding: 20px;
-    order: -1;
-    flex-shrink: 0;
-  }
+/* 强制应用样式 */
+.toc {
+  position: fixed !important;
+  left: 20px !important;
+  top: 100px !important;
+  width: 280px !important;
+  background: #f8f9fa !important;
+  border: 1px solid #ccc !important;
+  padding: 15px !important;
+  z-index: 100 !important;
+}
+
+.post-content {
+  margin-left: 320px !important;
 }
 </style>
 # 理性的代价：西方文明2500年的思想危机
