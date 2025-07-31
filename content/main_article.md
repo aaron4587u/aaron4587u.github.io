@@ -7,7 +7,28 @@ weight: 1
 ShowToc: true
 TocOpen: true
 ---
-
+<style>
+@media (min-width: 1024px) {
+  .post-single .post-header + .post-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+  }
+  
+  .toc {
+    position: sticky;
+    top: 20px;
+    width: 280px;
+    height: fit-content;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    order: -1;
+    flex-shrink: 0;
+  }
+}
+</style>
 # 理性的代价：西方文明2500年的思想危机
 
 ## 开篇声明
