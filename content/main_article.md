@@ -8,57 +8,29 @@ ShowToc: true
 TocOpen: true
 ---
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  // 查找所有可能的目录元素
-  console.log('=== 调试目录位置 ===');
+console.log('JavaScript开始执行');
+
+window.onload = function() {
+  console.log('页面加载完成');
   
-  // 尝试不同的选择器
-  const selectors = ['.toc', '#toc', '.TableOfContents', '.table-of-contents', 
-                    '[class*="toc"]', '[id*="toc"]'];
+  // 查找页面上所有包含"目录"文字的元素
+  const allElements = document.querySelectorAll('*');
+  let foundElements = [];
   
-  let tocElement = null;
-  
-  for (let selector of selectors) {
-    const element = document.querySelector(selector);
-    if (element) {
-      console.log('找到目录元素:', selector, element);
-      tocElement = element;
-      break;
+  allElements.forEach(function(el) {
+    if (el.textContent && el.textContent.includes('目录')) {
+      foundElements.push(el);
+      console.log('找到包含"目录"的元素:', el.tagName, el.className, el.id);
     }
+  });
+  
+  if (foundElements.length === 0) {
+    console.log('没有找到包含"目录"文字的元素');
+    console.log('页面总共有', allElements.length, '个元素');
   }
   
-  if (tocElement) {
-    // 强制移动到左侧
-    tocElement.style.cssText = `
-      position: fixed !important;
-      left: 20px !important;
-      top: 100px !important;
-      width: 280px !important;
-      height: 400px !important;
-      background: #f8f9fa !important;
-      border: 1px solid #ccc !important;
-      padding: 15px !important;
-      z-index: 1000 !important;
-      overflow-y: auto !important;
-    `;
-    
-    // 调整主内容区域
-    const content = document.querySelector('.post-content, .content, main');
-    if (content) {
-      content.style.marginLeft = '320px';
-    }
-    
-    console.log('目录已移动到左侧');
-  } else {
-    console.log('未找到目录元素，所有可能的选择器都不匹配');
-    // 列出页面上所有元素供调试
-    document.querySelectorAll('*').forEach(el => {
-      if (el.textContent.includes('目录') || el.className.includes('toc') || el.id.includes('toc')) {
-        console.log('可能的目录元素:', el);
-      }
-    });
-  }
-});
+  console.log('调试完成');
+};
 </script>
 # 理性的代价：西方文明2500年的思想危机
 
