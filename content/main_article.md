@@ -7,43 +7,41 @@ weight: 1
 ShowToc: true
 TocOpen: true
 ---
-<style>
-/* 桌面端左侧目录 */
-@media (min-width: 1024px) {
-  .toc {
-    position: fixed !important;
-    left: 20px !important;
-    top: 100px !important;
-    width: 280px !important;
-    height: calc(100vh - 120px) !important;
-    background: #f8f9fa !important;
-    border: 1px solid #e0e0e0 !important;
-    border-radius: 8px !important;
-    padding: 15px !important;
-    z-index: 1000 !important;
-    overflow-y: auto !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
-  }
+<script>
+setTimeout(function() {
+  console.log('开始移动目录');
   
-  /* 调整主内容区域 */
-  .post-single {
-    margin-left: 320px !important;
+  const toc = document.querySelector('.toc');
+  if (toc) {
+    console.log('找到目录元素');
+    
+    // 强制设置样式
+    toc.style.position = 'fixed';
+    toc.style.left = '20px';
+    toc.style.top = '100px';
+    toc.style.width = '280px';
+    toc.style.height = '400px';
+    toc.style.background = '#f8f9fa';
+    toc.style.border = '1px solid #ccc';
+    toc.style.padding = '15px';
+    toc.style.zIndex = '1000';
+    toc.style.overflowY = 'auto';
+    toc.style.borderRadius = '8px';
+    toc.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+    
+    // 调整主内容
+    const main = document.querySelector('.post-single');
+    if (main) {
+      main.style.marginLeft = '320px';
+      console.log('调整了主内容边距');
+    }
+    
+    console.log('目录移动完成');
+  } else {
+    console.log('没找到目录元素');
   }
-}
-
-/* 移动端保持原样 */
-@media (max-width: 1023px) {
-  .toc {
-    position: static !important;
-    width: auto !important;
-    margin: 20px 0 !important;
-  }
-  
-  .post-single {
-    margin-left: 0 !important;
-  }
-}
-</style>
+}, 1000);
+</script>
 # 理性的代价：西方文明2500年的思想危机
 
 ## 开篇声明
