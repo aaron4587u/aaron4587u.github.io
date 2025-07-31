@@ -7,31 +7,43 @@ weight: 1
 ShowToc: true
 TocOpen: true
 ---
-<script>
-console.log('JavaScript开始执行');
-
-window.onload = function() {
-  console.log('页面加载完成');
-  
-  // 查找页面上所有包含"目录"文字的元素
-  const allElements = document.querySelectorAll('*');
-  let foundElements = [];
-  
-  allElements.forEach(function(el) {
-    if (el.textContent && el.textContent.includes('目录')) {
-      foundElements.push(el);
-      console.log('找到包含"目录"的元素:', el.tagName, el.className, el.id);
-    }
-  });
-  
-  if (foundElements.length === 0) {
-    console.log('没有找到包含"目录"文字的元素');
-    console.log('页面总共有', allElements.length, '个元素');
+<style>
+/* 桌面端左侧目录 */
+@media (min-width: 1024px) {
+  .toc {
+    position: fixed !important;
+    left: 20px !important;
+    top: 100px !important;
+    width: 280px !important;
+    height: calc(100vh - 120px) !important;
+    background: #f8f9fa !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    padding: 15px !important;
+    z-index: 1000 !important;
+    overflow-y: auto !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
   }
   
-  console.log('调试完成');
-};
-</script>
+  /* 调整主内容区域 */
+  .post-single {
+    margin-left: 320px !important;
+  }
+}
+
+/* 移动端保持原样 */
+@media (max-width: 1023px) {
+  .toc {
+    position: static !important;
+    width: auto !important;
+    margin: 20px 0 !important;
+  }
+  
+  .post-single {
+    margin-left: 0 !important;
+  }
+}
+</style>
 # 理性的代价：西方文明2500年的思想危机
 
 ## 开篇声明
