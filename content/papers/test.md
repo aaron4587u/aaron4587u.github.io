@@ -39,11 +39,13 @@ th {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s ease, visibility 0.2s ease;
+  pointer-events: none; /* 防止tooltip干扰鼠标事件 */
 }
 
 /* 默认向下显示 */
 td:hover .cell-tooltip {
   top: 100%;
+  margin-top: 2px; /* 增加间距，避免紧贴 */
   opacity: 1;
   visibility: visible;
 }
@@ -52,6 +54,8 @@ td:hover .cell-tooltip {
 td:hover .cell-tooltip[data-position="top"] {
   top: auto;
   bottom: 100%;
+  margin-top: 0;
+  margin-bottom: 2px; /* 向上显示时的间距 */
   opacity: 1;
   visibility: visible;
 }
@@ -59,23 +63,27 @@ td:hover .cell-tooltip[data-position="top"] {
 /* 单元格内容样式 */
 .cell-content {
   display: inline-block;
+  width: 100%; /* 确保触发区域覆盖整个单元格 */
 }
 
 /* CSS变量检测视口空间（纯CSS近似方案） */
 td {
   --space-below: calc(100vh - 100%);
-  --tooltip-height: 30px; /* 假设tooltip高度 */
+  --tooltip-height: 30px;
 }
 
+/* 修复悬停稳定性 */
 td:hover .cell-tooltip {
   bottom: auto;
 }
 
-/* 接近底部时切换方向 */
+/* 接近底部时切换方向 - 增加延迟避免闪烁 */
 @media (max-height: 600px) {
   td:hover .cell-tooltip {
     top: auto;
     bottom: 100%;
+    margin-bottom: 2px;
+    transition-delay: 0.1s; /* 增加延迟 */
   }
 }
 
