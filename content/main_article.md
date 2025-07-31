@@ -4,6 +4,8 @@ date: 2025-01-30
 description: "分析理性僭越信仰的历史进程及其对当代社会撕裂的深层影响"
 keywords: ["康德", "理性主义", "社会撕裂", "哲学分析", "美国案例"]
 weight: 1
+ShowToc: true
+TocOpen: true
 ---
 
 <style>
