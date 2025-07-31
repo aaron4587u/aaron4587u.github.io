@@ -38,7 +38,7 @@ params:
     ShowCodeCopyButtons: true
     ShowAllPagesInArchive: false
     MainSections: ["papers","research"]
-    ShowToc: false
+    ShowToc: true
     disableScrollToTop: true
     TocOpen: true
     ShowWordCount: false
