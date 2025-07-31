@@ -4,32 +4,7 @@ date: 2025-01-30
 description: "分析理性僭越信仰的历史进程及其对当代社会撕裂的深层影响"
 keywords: ["康德", "理性主义", "社会撕裂", "哲学分析", "美国案例"]
 weight: 1
-ShowToc: true
-TocOpen: true
 ---
-
-<style>
-@media (min-width: 1024px) {
-  .post-single .post-header + .post-content {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-  }
-  
-  .toc {
-    position: sticky;
-    top: 20px;
-    width: 280px;
-    height: fit-content;
-    background: #f8f9fa;
-    border: 1px solid #e9ecef;
-    border-radius: 8px;
-    padding: 20px;
-    order: -1;
-    flex-shrink: 0;
-  }
-}
-</style>
 
 # 理性的代价：西方文明2500年的思想危机
 
