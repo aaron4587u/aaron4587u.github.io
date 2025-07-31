@@ -1,4 +1,167 @@
-# 悬停效果测试文档
+# 悬停效果测试文档（智能避免遮蔽版）
+
+## 测试目标
+
+验证tooltip智能定位，自动避免被视口边界遮蔽。
+
+<style>
+.test-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+    margin: 20px 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.test-table th {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 12px;
+    text-align: center;
+    border: 1px solid #34495e;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.test-table td {
+    border: 1px solid #ddd;
+    padding: 15px 12px;
+    vertical-align: top;
+    background-color: #fff;
+    position: relative;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.test-table td:hover {
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+.cell-tooltip {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    background: #2c3e50;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 10000;
+    font-size: 13px;
+    line-height: 1.4;
+    width: 280px;
+    max-width: calc(100vw - 20px);
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+    word-wrap: break-word;
+}
+
+.complex-tooltip {
+    width: 320px;
+    max-width: calc(100vw - 20px);
+}
+
+.complex-tooltip h4 {
+    margin: 0 0 8px 0;
+    color: #3498db;
+    font-size: 13px;
+    border-bottom: 1px solid #3498db;
+    padding-bottom: 4px;
+}
+
+.complex-tooltip ul {
+    margin: 0;
+    padding-left: 18px;
+    list-style-type: disc;
+}
+
+.complex-tooltip li {
+    margin-bottom: 4px;
+    font-size: 12px;
+}
+
+.complex-tooltip li strong {
+    color: #e74c3c;
+}
+
+.test-status {
+    background-color: #e8f4f8;
+    border: 1px solid #3498db;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.collision-marker {
+    color: #e74c3c;
+    font-weight: bold;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const tables = document.querySelectorAll('.test-table');
+    
+    tables.forEach(table => {
+        const cells = table.querySelectorAll('td');
+        
+        cells.forEach(cell => {
+            const tooltip = cell.querySelector('.cell-tooltip');
+            if (!tooltip) return;
+            
+            cell.addEventListener('mouseenter', function() {
+                const rect = this.getBoundingClientRect();
+                const viewportHeight = window.innerHeight;
+                const viewportWidth = window.innerWidth;
+                
+                // 先显示tooltip以获取其实际尺寸
+                tooltip.style.visibility = 'visible';
+                tooltip.style.opacity = '0';
+                const tooltipHeight = tooltip.offsetHeight;
+                const tooltipWidth = tooltip.offsetWidth;
+                
+                let top, left;
+                
+                // 默认向下显示
+                top = rect.bottom + 10;
+                
+                // 检查是否会被底部遮蔽
+                if (top + tooltipHeight > viewportHeight) {
+                    // 如果下方空间不够，改为向上显示
+                    top = rect.top - tooltipHeight - 10;
+                    
+                    // 如果上方空间也不够，就在视口内找最佳位置
+                    if (top < 0) {
+                        top = Math.max(10, viewportHeight - tooltipHeight - 10);
+                    }
+                }
+                
+                // 水平位置处理
+                left = rect.left;
+                if (left + tooltipWidth > viewportWidth) {
+                    left = viewportWidth - tooltipWidth - 10;
+                }
+                if (left < 10) {
+                    left = 10;
+                }
+                
+                // 应用位置
+                tooltip.style.top = top + 'px';
+                tooltip.style.left = left + 'px';
+                tooltip.style.opacity = '1';
+            });
+            
+            cell.addEventListener('mouseleave', function() {
+                tooltip.style.opacity = '0';
+                tooltip.style.visibility = 'hidden';
+            });
+        });
+    });
+});
+</script># 悬停效果测试文档
 
 ## 测试目标
 
