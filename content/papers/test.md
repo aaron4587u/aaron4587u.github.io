@@ -59,6 +59,30 @@
     margin-top: 8px;
     transition: opacity 0.2s ease, visibility 0.2s ease;
     pointer-events: none;
+    /* 防止溢出视口 */
+    max-width: calc(100vw - 40px);
+    word-wrap: break-word;
+}
+
+/* 右侧单元格的tooltip向左显示 */
+.test-table td:last-child .cell-tooltip {
+    left: auto;
+    right: 0;
+}
+
+/* 如果是底部行，tooltip向上显示 */
+.test-table tbody tr:last-child .cell-tooltip {
+    top: auto;
+    bottom: 100%;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.test-table tbody tr:last-child .cell-tooltip::before {
+    top: auto;
+    bottom: -6px;
+    border-bottom: none;
+    border-top: 6px solid #2c3e50;
 }
 
 .test-table td:hover .cell-tooltip {
@@ -78,6 +102,28 @@
 
 .complex-tooltip {
     width: 320px;
+    max-width: calc(100vw - 40px);
+}
+
+/* 右侧单元格的复杂tooltip */
+.test-table td:last-child .complex-tooltip {
+    left: auto;
+    right: 0;
+}
+
+/* 底部行的复杂tooltip */
+.test-table tbody tr:last-child .complex-tooltip {
+    top: auto;
+    bottom: 100%;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.test-table tbody tr:last-child .complex-tooltip::before {
+    top: auto;
+    bottom: -6px;
+    border-bottom: none;
+    border-top: 6px solid #2c3e50;
 }
 
 .complex-tooltip h4 {
