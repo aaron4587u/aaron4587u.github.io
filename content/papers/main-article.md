@@ -38,15 +38,15 @@ weight: 1
 
 要理解今天的危机，我们必须回到历史的起点。这不是一个突然发生的断裂，而是一个跨越千年的渐进过程。
 
-### 节点一：古希腊的理性觉醒（公元前5世纪）[→深度分析]
+### 节点一：古希腊的理性觉醒（公元前5世纪）[→深度分析](/nodes/ancient-greece/)
 
-苏格拉底向优西弗罗提出的那个著名问题——"虔诚是因为被神所爱而虔诚，还是因为虔诚所以被神所爱？"——首次让理性获得了审判神圣权威的话语权。
+苏格拉底向优西弗罗提出的那个著名问题——"虔诚是因为被神所爱而虔诚，还是因为虔诚所以被神所爱？"——首次让理性获得了审判神圣权威的理论依据。
 
-虽然苏格拉底的原意是追求更纯粹的宗教理解，但他建立的"理性审判神性"的先例对后世产生了深远影响。理性从解释神意的工具，开始向判断神意的标准转变。
+虽然苏格拉底的原意是追求更接近真理，但他建立的"理性审判神性"的先例对后世产生了深远影响。理性从解释神意的工具，开始向判断神意的标准转变。
 
 **关键意义**: 理性首次获得了挑战神圣权威的理论依据，虽然这种挑战最初是为了更接近真理。
 
-### 节点二：基督教的哲学化妥协（2-3世纪）[→深度分析]
+### 节点二：基督教的哲学化妥协（2-3世纪）[→深度分析](/nodes/christian-compromise/)
 
 早期基督教为了在希腊-罗马知识分子中传播，开始用哲学语言阐释信仰。克莱门特的策略在当时具有明显优势，但长远后果是理性获得了解释神圣启示的权威地位。
 
@@ -54,13 +54,13 @@ weight: 1
 
 **关键意义**: 理性从信仰的工具开始向信仰的基础转变，虽然这个转变在当时并不明显。
 
-### 节点三：中世纪的复杂博弈（6-15世纪）[→深度分析]
+### 节点三：中世纪的复杂博弈（6-15世纪）[→深度分析](/nodes/medieval-struggle/)
 
 中世纪千年间，理性从奥古斯丁的"信仰寻求理解"演变为阿奎那的"理性与信仰协调"。阿奎那试图通过理性证明神的存在，为理性获得独立地位铺平了道路，预示了"理性革命"的到来。
 
 **关键意义**: 理性从"信仰的仆人"逐渐向"信仰的伙伴"转变，为后续的"理性革命"做好了准备。
 
-### 节点四：康德的历史角色（18世纪）[→深度分析] ⭐
+### 节点四：康德的历史角色（18世纪）[→深度分析](/nodes/kant-revolution/) ⭐
 
 伊曼努尔·康德作为启蒙运动的集大成者，其思想贡献之巨大毋庸置疑。他为人类理性划定边界，为道德自律奠定基础，为知识获得提供保障，这些努力体现了伟大思想家的历史责任。
 
@@ -73,11 +73,64 @@ weight: 1
 - **理性概念的根本错误**: 将理性视为静态的、绝对的，忽视其历史性和文化性
 - **自我约束的根本悖论**: 高估了人类进行客观自我评估的能力
 
-这些缺陷通过历史传导机制在现代社会中被无限放大，详见[康德革命深度分析]。
+#### 康德革命的历史传导机制
+
+<div style="overflow-x: auto;">
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+<thead>
+<tr style="background-color: #f8f9fa;">
+<th style="border: 1px solid #ddd; padding: 10px; text-align: center;">层次</th>
+<th style="border: 1px solid #ddd; padding: 10px; text-align: center;">启蒙前期</th>
+<th style="border: 1px solid #ddd; padding: 10px; text-align: center;">康德革命</th>
+<th style="border: 1px solid #ddd; padding: 10px; text-align: center;">传导机制</th>
+<th style="border: 1px solid #ddd; padding: 10px; text-align: center;">长期后果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="border: 1px solid #ddd; padding: 10px; background-color: #e9ecef; font-weight: bold;">元价值层</td>
+<td style="border: 1px solid #ddd; padding: 10px;">理性挑战传统权威，但仍需外在支撑</td>
+<td style="border: 1px solid #ddd; padding: 10px;">理性获得完全的自我立法权</td>
+<td style="border: 1px solid #ddd; padding: 10px;">三大批判的系统建构</td>
+<td style="border: 1px solid #ddd; padding: 10px;">理性成为价值立法者</td>
+</tr>
+<tr style="background-color: #f9f9f9;">
+<td style="border: 1px solid #ddd; padding: 10px; background-color: #e9ecef; font-weight: bold;">核心价值层</td>
+<td style="border: 1px solid #ddd; padding: 10px;">自由、平等需要启示支撑</td>
+<td style="border: 1px solid #ddd; padding: 10px;">人的尊严基于理性能力</td>
+<td style="border: 1px solid #ddd; padding: 10px;">"人是目的"原则</td>
+<td style="border: 1px solid #ddd; padding: 10px;">权利话语无限扩张</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 10px; background-color: #e9ecef; font-weight: bold;">认知框架层</td>
+<td style="border: 1px solid #ddd; padding: 10px;">经验主义承认外在约束</td>
+<td style="border: 1px solid #ddd; padding: 10px;">先验哲学主动建构</td>
+<td style="border: 1px solid #ddd; padding: 10px;">"哥白尼革命"</td>
+<td style="border: 1px solid #ddd; padding: 10px;">主体性哲学统治</td>
+</tr>
+<tr style="background-color: #f9f9f9;">
+<td style="border: 1px solid #ddd; padding: 10px; background-color: #e9ecef; font-weight: bold;">传播系统层</td>
+<td style="border: 1px solid #ddd; padding: 10px;">启蒙沙龙精英传播</td>
+<td style="border: 1px solid #ddd; padding: 10px;">大学制度化教育</td>
+<td style="border: 1px solid #ddd; padding: 10px;">康德学派形成</td>
+<td style="border: 1px solid #ddd; padding: 10px;">理性教育全球化</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 10px; background-color: #e9ecef; font-weight: bold;">结构现实层</td>
+<td style="border: 1px solid #ddd; padding: 10px;">启蒙专制平衡</td>
+<td style="border: 1px solid #ddd; padding: 10px;">理性共和国理想</td>
+<td style="border: 1px solid #ddd; padding: 10px;">现代民主理论</td>
+<td style="border: 1px solid #ddd; padding: 10px;">政治权威世俗化</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+这一分析表格展示了康德哲学如何在五个不同层次上改变了西方文明的基础结构，其影响一直延续到今天的社会危机。
 
 **关键意义**: 康德不是理性僭越信仰的开创者，而是其集大成者，为1500年的历史进程提供了最终的理论整合。
 
-### 节点五：现代人权体制的理性化（1789年至今）[→深度分析] ⭐
+### 节点五：现代人权体制的理性化（1789年至今）[→深度分析](/nodes/modern-rights/) ⭐
 
 法国《人权宣言》与康德哲学的"同源分流"具有深刻的历史意义。与美国《独立宣言》的"神赋权利"不同，法国版本完全去除了神学色彩，纯粹基于理性原则。
 
